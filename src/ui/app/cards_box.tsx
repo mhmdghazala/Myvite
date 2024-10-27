@@ -1,5 +1,5 @@
-import "./ui.css";
-import "../App.css";
+import "./css/ui.css";
+
 import { CardViewBlock } from "./card_view";
 
 export function CardsBlock() {

@@ -8,7 +8,15 @@
   --1ry-button: #d9bc00;
   --2ry-button: #870d15;
 }
-
+.button{
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/button.png) no-repeat;
+  color: #ffffff;
+}
 .bar-side {
   padding: 0px;
   padding-bottom: 10px;

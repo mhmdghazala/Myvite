@@ -1,8 +1,8 @@
-import "../css/underwater.scss"
+import App from "./App"
+import "./css/ocean.scss"
 
-export function UnderWater() {
+export default function Ocean() {
     return (
-        
 <div className="container">
   <div className="whaleContainer">
     <div className="whalePos size1">
@@ -47,6 +47,7 @@ export function UnderWater() {
     </div>
   </div>
   <div className="rocks">
+  <App/>
     <div className="rock one"></div>
     <div className="rock two"></div>
     <div className="rock three"></div>

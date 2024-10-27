@@ -1,4 +1,4 @@
-import "./ui.css";
+import "./css/ui.css";
 
 interface CardDetails {
   Id: string;

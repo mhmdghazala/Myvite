@@ -1,4 +1,5 @@
-import "./ui.css";
+import "./css/ui.css";
+
 export function PirateBar() {
  return (
   <div className="bar-down">

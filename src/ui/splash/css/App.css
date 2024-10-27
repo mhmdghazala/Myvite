@@ -11,16 +11,14 @@
   margin-bottom: 50px;
 }
 .app {
-  position: absolute;
   display:flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   margin: 5px;
   overflow: auto;
-  height: 600px;
-  width: 100%;
-  bottom: 0px;
+  height: 100vh;
+  width: 100vw;
 }
 .nav {
   position: fixed;
@@ -33,15 +31,6 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 2.5px;
-}
-.button{
-  padding: 0px;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/button.png) no-repeat;
-  color: #ffffff;
 }
 .button:hover{
   transform: scale(0.9);
