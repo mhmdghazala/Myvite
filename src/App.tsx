@@ -7,30 +7,13 @@ import './App.css'
 function App() {
   
   return (
-  <>
-    <div className="stars">
-      <div className="twinkling"></div>
+    <>
+    <div className="app">
+      <PirateBar/>
+      <CardsBlock/>
+      <div className="spacer"></div>
     </div>
-
-    <div className="ocean">
-      <div className="app">
-        <PirateBar/>
-        <CardsBlock/>
-        <div className="spacer"></div>
-      </div>
-      <div className="wave wave1"></div>
-      <div className='wave wave2'></div>
-      <div className='wave wave3'></div>
-      <div className='wave wave4'></div>
-    </div>
-    <div className="nav">
-      <button className="button">play</button>
-      <button className="button">Tre</button>
-      <button className="button">pongs</button>
-      <button className="button">shop</button>
-    </div>
-  </>
+    </>
   )
 }
-
 export default App

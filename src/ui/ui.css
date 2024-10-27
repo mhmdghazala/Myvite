@@ -39,7 +39,7 @@
   align-text: left;
   jusitfy-content: flex-start;
   alignt-items: center;
-  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/Beri.png) no-repeat;
+  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/Beri.png) no-repeat;
 }
 .button-gems {
   width: 135px;
@@ -54,12 +54,12 @@
   align-text: left;
   jusitfy-content: flex-start;
   alignt-items: center;
-  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/gems.png) no-repeat;
+  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/gems.png) no-repeat;
 }
 .cover {
   border-radius: 10px;
   border: 2.5px solid var(--title-color);
-  weight: 280px;
+  width: 280px;
   height: 100px;
   padding: 10px;
   display: flex;
@@ -102,7 +102,7 @@
 .cards-box {
   height: 800px;
   width: 280px; 
-  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/cards.png) no-repeat;
+  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/cards.png) no-repeat;
   background-size: 280px 600px;
   background-position: top left;
   display: flex;

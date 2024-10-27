@@ -12,7 +12,7 @@ export function PirateBar() {
 export function PirateMedal(){
   return (
     <div className="cover">
-      <img className="medal-icon" src="https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/lavapirateslogo%20(350%20x%20350%20px).png" img-size="100px" ></img>
+      <img className="medal-icon" src="https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/lavapirateslogo%20(350%20x%20350%20px).png" img-size="100px" ></img>
       <div className="medal">
         <div className="medal-title">
         Samurai

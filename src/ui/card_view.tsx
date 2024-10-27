@@ -8,8 +8,8 @@ interface CardDetails {
 
 export function CardViewBlock(props: CardDetails) {
   const { Id, Lvl, Bal } = props;
-  let Img = "https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/lavapirateslogo%20(350%20x%20350%20px).png"; // Declare Img as a string
-  if (Lvl <= 5) { Img = "https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/lavapirateslogo%20(350%20x%20350%20px).png"};
+  let Img = "https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/lavapirateslogo%20(350%20x%20350%20px).png"; // Declare Img as a string
+  if (Lvl <= 5) { Img = "https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/lavapirateslogo%20(350%20x%20350%20px).png"};
   if (Lvl >= 5 && Lvl < 10) { Img = ""};
   if (Lvl >= 10 && Lvl < 15) { Img = ""};
   if (Lvl >= 15 && Lvl < 20) { Img = ""};
