@@ -241,10 +241,9 @@
   background-color: var(--1ry-button);
 }
 .arena-box {
+  border: solid #d9bc00;
   width: 280px;
-  height: 300px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
+  height: 600px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;

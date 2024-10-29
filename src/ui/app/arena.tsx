@@ -10,8 +10,6 @@ export function Arena() {
     </div>
     <div className="arena-box">
       <div className="arena-view" id="page-1">1</div>
-      <div className="arena-view" id="page-2">2</div>
-      <div className="arena-view" id="page-3">3</div>
     </div>
   </div>
   )
