@@ -266,3 +266,26 @@
 .nav-icons:hover{
   transform: scale(1.25);
 }
+.board-header {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background-size: auto;
+  background: url(/public/header.png) no-repeat;
+}
+.board-classic {
+  position: absolute;
+  width: 90%;
+  height: 95%;
+  border-style:dashed;
+  border-color:  var(--1ry-button);
+  border-width: 1.5vw;
+  overflow: auto;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 3%;
+  padding-top: 3%;
+}

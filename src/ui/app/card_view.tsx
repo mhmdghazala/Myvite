@@ -33,5 +33,4 @@ export function CardViewBlock(props: CardDetails) {
       </button>
     </div>
   )};
-    
 
