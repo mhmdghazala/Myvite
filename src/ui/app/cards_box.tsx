@@ -8,17 +8,6 @@ export function CardsBlock() {
   const CardLvl = 1 as number;
    return (
     <div className="cards-box">
-      <div className="button-top-card">
-        <button className="button">P</button>
-      </div>
-      <div className="bar-side">
-        <div className="button-left-card">
-          <button className="button">Cs</button>
-        </div>
-        <div className="button-right-card">
-          <button className="button">Ps</button>
-        </div>
-      </div>
       <div className="cards-box-title">
         Cards
       </div>
@@ -31,7 +20,6 @@ export function CardsBlock() {
           <CardViewBlock Id={"C1"} Lvl={4} Bal={30}/>
         </div>
       </div>
-      <div className="spacer"></div>
     </div>
    )
 }

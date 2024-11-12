@@ -3,9 +3,8 @@ import { Suspense} from 'react';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { CardsBlock } from '../app/cards_box';
 import { Arena } from '../app/arena';
-import { PirateBar, PirateMedal } from '../app/bars';
+import { PirateBar, PirateMedal, PirateNav } from '../app/bars';
 import { Route ,useLocation ,Routes } from "react-router-dom";
-import { Link } from 'react-router-dom';
 
 function App() {
   const Location = useLocation();
@@ -24,9 +23,7 @@ function App() {
   </TransitionGroup>
 </div>
 <div className='nav'>
-          <Link to="/">Home</Link>
-          <Link to="/arena">Arena</Link>
-          <Link to="/cards">Cards</Link>
+  <PirateNav/>
 </div> 
 </Suspense>
   )
