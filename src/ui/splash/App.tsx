@@ -1,46 +1,33 @@
-import { PirateBar } from '../app/bars'
-import { CardsBlock }from "../app/cards_box"
-import { PirateMedal } from "../app/bars"
-import { Arena } from "../app/arena";
 import './css/App.css'
-import { Suspense, useRef, useState } from 'react';
-import { CSSTransition } from "react-transition-group";
-
+import { Suspense} from 'react';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CardsBlock } from '../app/cards_box';
+import { Arena } from '../app/arena';
+import { PirateBar, PirateMedal } from '../app/bars';
+import { Route ,useLocation ,Routes } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function App() {
-  const [Tre, setTre] = useState(true);
-  const [Play, setPlay] = useState(false);
-  const [Home, setHome] = useState(false);
-  const ModalsRef = useRef(null);
-
+  const Location = useLocation();
   return (
-<Suspense fallback={""}>
-  <div className="app">
-    <PirateBar />
-      <CSSTransition Ref={ModalsRef} in={Home} timeout={100} classNames="modals" unmountOnExit 
-      >
-        <div className='screen' ref={ModalsRef}>
-          <CardsBlock/>
-        </div>
-      </CSSTransition>
-      <CSSTransition Ref={ModalsRef} in={Play} timeout={1000} classNames="modals" unmountOnExit 
-      >
-        <div className="screen" ref={ModalsRef}>
-          <img src="/bluesea.png" />
-        </div>
-      </CSSTransition>
-      <CSSTransition Ref={ModalsRef} in={Tre} timeout={1000} classNames="modals" unmountOnExit 
-    >
-      <div className='screen' ref={ModalsRef}>
-        <img src="/grandline.png" />
-      </div>
-      </CSSTransition>
-  </div>
-  <div className="nav">
-    <button onClick={()=> (setPlay(false), setTre(false), setHome(true))}> Home </button>
-    <button onClick={()=> (setHome(false), setTre(false), setPlay(true))}> Arena </button>
-    <button onClick={()=> (setPlay(false), setHome(false), setTre(true))}> Tre </button>
-  </div>
+<Suspense fallback={"Loading.."}>
+<div className="bar"> <PirateBar /> </div>
+<div className="app">
+  <TransitionGroup component={null}>
+    <CSSTransition key={Location.key} classNames="modals" timeout={300}>
+      <Routes location={location}>
+        <Route path="/cards" element={<CardsBlock />} />
+        <Route path="/arena" element={<Arena />} />
+        <Route path="*" element={<PirateMedal />} />
+      </Routes>
+    </CSSTransition>
+  </TransitionGroup>
+</div>
+<div className='nav'>
+          <Link to="/">Home</Link>
+          <Link to="/arena">Arena</Link>
+          <Link to="/cards">Cards</Link>
+</div> 
 </Suspense>
   )
 }

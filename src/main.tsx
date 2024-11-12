@@ -1,10 +1,11 @@
+import "./css/index.css"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Ocean from "./ui/splash/ocean.tsx"
-import "./css/index.css"
+import { BrowserRouter } from "react-router-dom"
+import Ship from "./ui/splash/ship.tsx"
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Ocean/>
+    <BrowserRouter> <Ship/> </BrowserRouter>
   </StrictMode>,
 )

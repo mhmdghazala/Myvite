@@ -1,5 +1,6 @@
-import App from "./App"
 import "./css/ocean.scss"
+import { BrowserRouter } from "react-router-dom"
+import App from "./App"
 
 export default function Ocean() {
     return (
@@ -47,7 +48,7 @@ export default function Ocean() {
     </div>
   </div>
   <div className="rocks">
-  <App/>
+    <App/>
     <div className="rock one"></div>
     <div className="rock two"></div>
     <div className="rock three"></div>
