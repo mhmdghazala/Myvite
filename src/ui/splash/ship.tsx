@@ -1,11 +1,13 @@
-import Board from '../../assets/ship.svg';
-import App from './App';
 import "./css/ship.css"
+import App from './App';
 export default function Ship() {
     return (
     <>
-      <App/>    
-      <img className='board' src="/ship.png" alt="Board" />
+    <div className="stars">
+      <div className="twinkling"></div>
+    </div>
+    <App/>   
+    <img className='board' src="/ship.png" alt="Board" />
     </>
     )
 }

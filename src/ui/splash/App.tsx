@@ -26,7 +26,7 @@ function App() {
 </div>
 <div className='nav'>
   <PirateNav/>
-</div> 
+</div>
 </Suspense>
   )
 }

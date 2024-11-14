@@ -220,7 +220,7 @@
   border: 1px solid var(--sub-title-color);
   font-size: 0.75rem;
   font-weight: bold;
-  colr: var(--text-color);
+  color: var(--text-color);
   background-color: var(--1ry-button);
 }
 .arena-box {
@@ -269,23 +269,28 @@
 .board-header {
   position: absolute;
   width: fit-content;
-  height: fit-content;
-  background-size: auto;
-  background: url(/public/header.png) no-repeat;
+  height: 20vh;
 }
 .board-classic {
-  position: absolute;
-  width: 90%;
-  height: 95%;
-  border-style:dashed;
-  border-color:  var(--1ry-button);
-  border-width: 1.5vw;
-  overflow: auto;
-  scroll-behavior: smooth;
+  width: 100vw;
+  height: 80vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 3%;
-  padding-top: 3%;
+}
+.board-content {
+  padding-top: 6vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 5%;
+  border: ridge #b8311c 1vh;
+  width: 70vw;
+  height: 70vh;
+  margin-top: 10vh;
+  background-color: #f79343;
 }
