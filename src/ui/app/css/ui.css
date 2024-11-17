@@ -107,41 +107,9 @@
   flex-flow: column wrap;
   padding-left: 5px;
 }
-.cards-box {
-  position: absolute;
-  height: 75vh;
-  width: 75vw;
-  background: url(https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/cards.png) no-repeat;
-  background-size: 75vw 75vh;
-  background-position: top left;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0px;
-  padding-top: 20vh;
-}
-.cards-box-title {
-  height: 8.5%;
-  color: var(--title-color);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 2px var(--sub-title-color);
-}
-.cards-box-content {
-  height: 45%;
-  width: 60%;
-  overflow: auto;
-  scroll-behavior: smooth;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-}
 .card-common {
   border-radius: 5px;
-  width: 45%;
+  width: 15vh;
   padding: 2px;
   display: flex;
   justify-content: center;
@@ -152,7 +120,7 @@
 }
 .card-epic {
   border-radius: 5px;
-  width: 45%;
+  width: 15vh;
   padding: 2px;
   display: flex;
   justify-content: center;
@@ -163,7 +131,7 @@
 }
 .card-legend {
   border-radius: 5px;
-  width: 45%;
+  width: 15vh;
   padding: 2px;
   display: flex;
   justify-content: center;
@@ -182,13 +150,13 @@
 }
 .card-title {
   padding: 0px;
-  font-size: 0.75rem;
+  font-size: small;
   font-weight: bold;
   color: var(--text-color);
 }
 .card-lvl {
   width: 50%;
-  font-size: 0.75rem;
+  font-size: small;
   font-weight: bold;
   color: var(--sub-title-color);
   display: flex;
@@ -197,7 +165,7 @@
 }
 .card-bal {
   width: 50%;
-  font-size: 0.75rem;
+  font-size: small;
   font-weight: bold;
   color: var(--sub-title-color);
   display: flex;
@@ -218,66 +186,68 @@
   width: 100%;
   border-radius: 5px;
   border: 1px solid var(--sub-title-color);
-  font-size: 0.75rem;
+  font-size: medium;
   font-weight: bold;
   color: var(--text-color);
   background-color: var(--1ry-button);
 }
-.arena-box {
-  border: solid #d9bc00;
-  width: 280px;
-  height: 600px;
+.arena {
+  width: 30vh;
+  height: 30vh;
+  margin: 1vh;
+  border-radius: 5%;
+  border: #000000 solid 0.5vh;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
   align-items: center;
 }
-.arena-view {
-  width: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 5em;
+.arena-header {
+  height: 30%;
+  width: 100%;
+  background-color: #000000;
+  color: var(--1ry-button);
+  font-size: large;
 }
-.spacer {
-  height: 200px;
-  width: 280px;
-  margin-bottom: 50px;
+.arena-sub-header {
+  font-size: small;
+  color: var(--text-color);
 }
-.nav-bar {
+.arena-cover {
+  height: 70%;
+  width: 100%;
+}
+.nav {
+  height: 10vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: row nowrap;
-  padding-left: 5%;
 }
 .nav-icons {
-  width: 50%;
-  height: 50%;
+  margin-left: 1vh;
+  background-color: #b8311c;
+  border-radius: 10%;
+  width: 8vh;
+  height: 8vh;
 }
-.nav-text {
-  margin:0%;
-  padding-left: 10%;
-  color: var(--sub-title-color);
-  font-size:x-small;
-  font-weight: bold;
+.nav-active {
+  border: #b8311c solid 0.5vh;
+  background-color: #f79343;
 }
-.nav-icons:hover{
-  transform: scale(1.25);
+.board-classic {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 .board-header {
   position: absolute;
   width: fit-content;
   height: 20vh;
-}
-.board-classic {
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
 }
 .board-content {
   padding-top: 6vh;
@@ -290,7 +260,7 @@
   border-radius: 5%;
   border: ridge #b8311c 1vh;
   width: 70vw;
-  height: 70vh;
+  height: 60vh;
   margin-top: 10vh;
   background-color: #f79343;
 }

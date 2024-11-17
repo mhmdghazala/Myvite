@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./css/ui.css";
+import { useState } from "react";
 
 export function PirateBar() {
  return (
@@ -26,12 +27,22 @@ export function PirateMedal(){
     </div>
   )}
   export function PirateNav() {
+    //Define Variable
+    const [B1, setB1] = useState("nav-icons");
+    const [B2, setB2] = useState("nav-icons");
+    const [B3, setB3] = useState("nav-icons");
+    const [B4, setB4] = useState("nav-icons");
+    //Set Functions
+    const Nav1 = () => { setB1("nav-icons nav-active"), setB2("nav-icons"), setB3("nav-icons"), setB4("nav-icons")};
+    const Nav2 = () => { setB2("nav-icons nav-active"), setB1("nav-icons"), setB3("nav-icons"), setB4("nav-icons")};
+    const Nav3 = () => { setB3("nav-icons nav-active"), setB2("nav-icons"), setB1("nav-icons"), setB4("nav-icons")};
+    const Nav4 = () => { setB4("nav-icons nav-active"), setB2("nav-icons"), setB3("nav-icons"), setB1("nav-icons")};
     return (
-       <div className="nav-bar">
-          <Link to="/"> <img className="nav-icons" src="/profile.png" alt="Profile" /> <div className="nav-text">Profile</div> </Link>
-          <Link to="/arena"> <img className="nav-icons" src="/arena.png" alt="Arena" /> <div className="nav-text">Arena</div> </Link>
-          <Link to="/cards"> <img className="nav-icons" src="/tre.png" alt="Tre" /> <div className="nav-text">Cards</div> </Link>
-          <Link to="/board"> <img className="nav-icons" src="/play.png" alt="Play" /> <div className="nav-text">play</div> </Link>
+       <div className="nav">
+          <Link onClick={Nav1} to="/"> <img className={B1} src="/profile.png" alt="Profile" /> </Link>
+          <Link onClick={Nav2} to="/arena"> <img className={B2} src="/arena.png" alt="Arena" /> </Link>
+          <Link onClick={Nav3} to="/cards"> <img className={B3} src="/tre.png" alt="Tre" /> </Link>
+          <Link onClick={Nav4} to="/board"> <img className={B4} src="/play.png" alt="Play" /> </Link>
        </div>
     )
    }
