@@ -3,12 +3,13 @@ import { Suspense} from 'react';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { CardsBlock } from '../app/cards_box';
 import { Arena } from '../app/arena';
-import { PirateBar, PirateMedal, PirateNav } from '../app/bars';
+import { PirateBar, PirateMap, PirateMedal, PirateNav } from '../app/bars';
 import { Route ,useLocation ,Routes } from "react-router-dom";
 import { KingsBoard } from '../app/board';
 
 function App() {
   const Location = useLocation();
+  const HomeHeigth = ""
   return (
 <Suspense fallback={"Loading.."}>
 <div className='bar'>
@@ -30,7 +31,7 @@ function App() {
         <Route path="/blue-sea" element={<div> Blue Sea </div>} />
         <Route path="/grand-line" element={<div> Grand Line </div>} />
         <Route path="/new-world" element={<div> New World </div>} />
-        <Route path="/" element={<PirateMedal />} />
+        <Route path="/" element={<PirateMap H="25vh" />}/>
         <Route path="*" element={<PirateMedal />} />
       </Routes>
     </CSSTransition>

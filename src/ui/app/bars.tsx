@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./css/ui.css";
 import { useState } from "react";
+import type * as CSS from 'csstype';
 
 export function PirateBar() {
  return (
@@ -46,3 +47,38 @@ export function PirateMedal(){
        </div>
     )
    }
+
+export function PirateMap({H="55vh"}) {
+  const BodyStyle: CSS.Properties = {
+    height: H, // by View Hiegth not more 55vh
+  };
+  return (
+  <div className="bar-down">
+    <div className="map-header">
+      <div className="map-header-outline"></div>
+       <div className="map-header-nextline"></div>
+        <div className="map-header-stick"></div>
+           <div className="map-header-line">
+            Header
+           </div>
+        <div className="map-header-stick"></div>
+       <div className="map-header-nextline"></div>
+      <div className="map-header-outline"></div>
+    </div>
+      <div className="map-body" style={BodyStyle}>
+        Body
+      </div>
+    <div className="map-header">
+      <div className="map-header-outline"></div>
+       <div className="map-header-nextline"></div>
+        <div className="map-header-stick"></div>
+           <div className="map-header-line">
+            Footer
+           </div>
+        <div className="map-header-stick"></div>
+       <div className="map-header-nextline"></div>
+      <div className="map-header-outline"></div>
+    </div>
+  </div>
+  )
+}
