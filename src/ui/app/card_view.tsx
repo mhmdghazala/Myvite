@@ -26,6 +26,8 @@ export function CardViewBlock(props: CardDetails) {
   if (Id == "L1" || Id == "L2" || Id == "L3") {CardClass="card legend", TagClass= "tag-body legend ", Rarity="Legendary"};
   // set CardsUI
   const [Info, setInfo] = useState(false);
+  const [Up, setUP] = useState(false);
+  const [Send, setSend] = useState(false);
   const CSSRef = useRef(null);
   return (
   <div>
@@ -53,25 +55,47 @@ export function CardViewBlock(props: CardDetails) {
       <div className="ability-bar">
         <div className="ability-icon">
           <img className="tag-icon" src="/profile.png"/>
-          <div>Def</div>
+          <div className="ability-title">Def</div>
+          <div className="ability-value"> 5 sec</div>
         </div>
         <div className="ability-icon">
           <img className="tag-icon" src="/profile.png"/>
-          <div> Atk </div>
+          <div className="ability-title"> Atk </div>
+          <div className="ability-value"> 10 mvs</div>
         </div>
         <div className="ability-icon">
           <img className="tag-icon" src="/profile.png"/>
-          <div> Exp </div>
+          <div className="ability-title"> Haki </div>
+          <div className="ability-value">100 exp</div>
         </div>
         <div className="ability-icon">
           <img className="tag-icon" src="/profile.png"/>
-          <div> $ </div>
+          <div className="ability-title"> Beri </div>
+          <div className="ability-value">10/h</div>
         </div>
       </div>
       <div className="card-tools">
-        <div className="button-1ry" > Up </div>
-        <div className="button-2ry"> Send </div>
+        <div className="button-1ry" onClick={() => setUP(true)}> UP </div>
+        <div className="button-2ry" onClick={() => setSend(true)}> Send </div>
         <div className="button-2ry" onClick={() => setInfo(false)}> Exit </div>
+        <CSSTransition in={Up} nodeRef={CSSRef} timeout={300} classNames="fade" unmountOnExit>
+          <div className="card-tools-dialog" ref={CSSRef}>
+            <div className="dialog-message"> You Dont Have Enough Beri & cards </div>
+            <div className="dialog-tools">
+              <div className="dialog-button disabled-button" onClick={() => setUP(false)}>X</div>
+              <div className="dialog-button" onClick={() => setUP(false)}>OK</div>
+            </div>
+          </div>
+        </CSSTransition>
+        <CSSTransition in={Send} nodeRef={CSSRef} timeout={300} classNames="fade" unmountOnExit>
+          <div className="card-tools-dialog" ref={CSSRef}>
+            <input className="dialog-message" defaultValue={"insert Friend Addr"}/>
+            <div className="dialog-tools">
+              <div className="dialog-button disabled-button" onClick={() => setSend(false)}>X</div>
+              <div className="dialog-button" onClick={() => setSend(false)}>OK</div>
+            </div>
+          </div>
+        </CSSTransition>
       </div>
     </div>
     </CSSTransition>
