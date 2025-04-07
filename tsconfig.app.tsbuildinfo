@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/ui/app/arena.tsx","./src/ui/app/bars.tsx","./src/ui/app/board.tsx","./src/ui/app/card_view.tsx","./src/ui/app/cards_box.tsx","./src/ui/splash/App.tsx","./src/ui/splash/ocean.tsx","./src/ui/splash/ship.tsx","./src/ui/splash/stars.tsx"],"errors":true,"version":"5.6.3"}
