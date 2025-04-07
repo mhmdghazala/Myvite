@@ -1,0 +1,7 @@
+{
+    "url": "https://lavapirates.com",                        // required
+    "name": "LavaPirates",                      // required
+    "iconUrl": "https://raw.githubusercontent.com/mhmdghazala/Myvite/refs/heads/main/public/logo.png",               // required
+    "termsOfUseUrl": "",     // optional
+    "privacyPolicyUrl": "" // optional
+}
